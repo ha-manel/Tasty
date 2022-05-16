@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+}
+
+nav {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  margin-right: 40px;
+}
+
+#recipes-cards {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: beige;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #343a40;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.footer {
+  margin-left: 5%;
+  font-weight: 600;
+}
