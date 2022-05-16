@@ -40,3 +40,15 @@ nav ul a {
   height: 200px;
   background-color: beige;
 }
+
+.footer a {
+  text-decoration: none;
+  color: #343a40;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.footer {
+  margin-left: 5%;
+  font-weight: 600;
+}
