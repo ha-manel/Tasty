@@ -25,4 +25,4 @@ const fetchRecipes = async () => {
     });
 };
 
-export default { fetchRecipes };
+export default fetchRecipes;
