@@ -16,10 +16,10 @@ const createCard = (img, name) => {
 };
 
 const fetchRecipes = async () => {
-  await fetch('www.themealdb.com/api/json/v1/1/filter.php?a=Italian')
+  await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian')
     .then((response) => response.json())
     .then((json) => {
-      json.meals.array.forEach((meal) => {
+      json.meals.forEach((meal) => {
         createCard(meal.strMealThumb, meal.strMeal);
       });
     });
