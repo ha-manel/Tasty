@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600;700&display=swap');
 
-body{
+body {
   margin: 0;
   font-family: 'Dosis', sans-serif;
 }
 
-nav{
+nav {
   width: 100vw;
   height: 50px;
   display: flex;
@@ -13,7 +13,7 @@ nav{
   align-items: center;
 }
 
-nav ul{
+nav ul {
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -30,7 +30,7 @@ nav ul a {
   margin-right: 40px;
 }
 
-#recipes-cards{
+#recipes-cards {
   width: 90%;
   margin: 50px auto;
 }
