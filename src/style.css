@@ -17,7 +17,7 @@ nav {
   align-items: center;
   background-color: #fefae0;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
 nav ul {
@@ -28,7 +28,7 @@ nav ul {
   align-items: center;
 }
 
-nav ul a {
+.nav-link {
   text-decoration: none;
   color: #606c38;
   font-size: 18px;
@@ -38,8 +38,8 @@ nav ul a {
   transition: all 0.3s ease-in-out;
 }
 
-nav ul a:hover {
-  color: #E05F37;
+.nav-link:hover {
+  color: #e05f37;
 }
 
 #headline {
@@ -63,7 +63,7 @@ nav ul a:hover {
   gap: 40px;
 }
 
-#recipes-cards h2{
+#recipes-cards h2 {
   position: absolute;
   top: -80px;
   text-align: center;
@@ -79,14 +79,14 @@ nav ul a:hover {
   align-items: center;
   padding: 5px 0 35px;
   margin-top: 40px;
-  border: 1px solid #EFE7C4;
+  border: 1px solid #efe7c4;
   border-radius: 12px;
   background-color: rgba(239, 231, 196, 0.5);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }
 
 .meal-thumbnail {
-  width: 280px; 
+  width: 280px;
   height: 280px;
   object-fit: cover;
 }
@@ -107,7 +107,7 @@ nav ul a:hover {
 .meal-name {
   font-size: 23px;
   margin-top: 15px;
-  color: #9B8834;
+  color: #9b8834;
 }
 
 .like-btn {
@@ -129,7 +129,7 @@ nav ul a:hover {
   font-family: inherit;
   color: #fff;
   font-weight: 600;
-  background-color: #E05F37;
+  background-color: #e05f37;
   border: 1px solid#E05F37;
   border-radius: 8px;
   padding: 8px 12px;
@@ -142,9 +142,9 @@ nav ul a:hover {
   border: 1px solid #ff914d;
 }
 
-footer{
+footer {
   width: 100vw;
-  background-color: #EFE7C4;
+  background-color: #efe7c4;
   padding: 15px 0;
 }
 
