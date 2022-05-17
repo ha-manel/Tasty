@@ -1,4 +1,7 @@
 const recipeCards = document.querySelector('#recipes-cards');
+const recipesLink = document.querySelector('#recipes-link');
+
+const itemsCounter = (counter) => counter + 1;
 
 const createCard = (img, name, id) => {
   const card = document.createElement('div');
@@ -17,12 +20,15 @@ const createCard = (img, name, id) => {
 };
 
 const fetchRecipes = async () => {
+  let counter = 0;
   await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian')
     .then((response) => response.json())
     .then((json) => {
       json.meals.forEach((meal) => {
         createCard(meal.strMealThumb, meal.strMeal, meal.idMeal);
+        counter = itemsCounter(counter);
       });
+      recipesLink.innerHTML = `Recipes (${counter})`;
     });
 };
 
