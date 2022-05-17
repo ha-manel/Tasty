@@ -2,6 +2,7 @@ const modal = document.querySelector('.comment-modal');
 const modalImg = document.querySelector('.popup-image img');
 const modalTitle = document.querySelector('.item-info h3');
 const modalRecipe = document.querySelector('.recipe');
+const closeBtn = document.querySelector('.close-btn');
 
 const baseURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
@@ -21,6 +22,11 @@ const displayPopup = () => {
           modalRecipe.innerHTML = json.meals[0].strInstructions;
         });
     });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    document.querySelector('body').classList.remove('no-scroll');
   });
 };
 

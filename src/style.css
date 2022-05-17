@@ -175,7 +175,13 @@ nav ul {
   align-items: center;
   background-color: #fefae0;
   border-radius: 12px;
-  padding: 30px;
+  padding: 0 30px 30px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 70px;
+  align-self: flex-end;
 }
 
 .popup-image {
