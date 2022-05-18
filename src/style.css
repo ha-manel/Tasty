@@ -104,7 +104,8 @@ nav ul {
   align-items: baseline;
 }
 
-.meal-name {
+.meal-name,
+.food-name {
   font-size: 23px;
   margin-top: 15px;
   color: #9b8834;
@@ -138,11 +139,6 @@ nav ul {
   transition: all 0.5s ease;
 }
 
-.comments-btn:hover {
-  background-color: #ff914d;
-  border: 1px solid #ff914d;
-}
-
 footer {
   width: 100vw;
   background-color: #efe7c4;
@@ -174,9 +170,12 @@ footer {
 }
 
 .image-container {
-  width: 20rem;
-  height: 15rem;
+  width: 50vw;
+  height: 18rem;
+  margin: auto;
+  border-radius: 15px;
   object-fit: contain;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 .top-img {
@@ -193,57 +192,47 @@ footer {
 .modal-container {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  background-color: white;
-  margin: 50px auto;
+  width: 60%;
+  margin: 10px auto;
   align-items: center;
   padding: 5px;
-  border: 2px solid black;
-}
-
-.units {
-  display: flex;
-  justify-content: space-between;
-  width: 30rem;
-  margin-bottom: 5px;
-  margin-left: -50px;
-}
-
-.left-detail,
-.right-detail {
-  display: flex;
-  flex-direction: column;
+  border: 1px solid #efe7c4;
+  border-radius: 12px;
+  background-color: rgba(239, 231, 196);
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }
 
 #form-1 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 40vw;
   margin-bottom: 5px;
 }
 
 #insight {
   margin: 10px;
   height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 #yourname {
   margin: 10px;
-  height: 30px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 #submit {
   width: 25%;
-  height: 30px;
+  height: 40px;
   align-self: flex-end;
   margin-right: 10px;
   cursor: pointer;
-}
-
-.modal-body span {
-  line-height: 30px;
-  font-size: 16px;
+  color: #fff;
   font-weight: 600;
+  background-color: #e05f37;
+  border: 1px solid#E05F37;
 }
 
 .close {
@@ -262,12 +251,20 @@ footer {
   flex-direction: column;
   list-style-type: none;
   margin-left: -30px;
+  color: black;
+  font-weight: 600;
 }
 
 h4 {
   font-size: 18px;
-  margin-top: 25px;
-  padding: 20px;
-  margin-left: -100px;
+  margin-top: -15px;
   font-weight: 700;
+  margin-left: 20px;
+  color: #bf0603;
+}
+
+.comments-btn:hover,
+#submit:hover {
+  background-color: #ff914d;
+  border: 1px solid #ff914d;
 }
