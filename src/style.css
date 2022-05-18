@@ -223,8 +223,13 @@ nav ul {
 }
 
 .comment {
-  margin-bottom: 15px;
+  list-style-type: none;
+}
+
+.comment li {
+  margin-bottom: 8px;
   border-bottom: 1px solid #ced4da;
+  padding-bottom: 8px;
 }
 
 .comment span {
@@ -243,7 +248,6 @@ nav ul {
 
 .add-comment {
   width: 500px;
-  margin-top: 20px;
 }
 
 .add-comment form {

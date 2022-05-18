@@ -3,11 +3,15 @@ import fetchRecipes from './display-cards.js';
 import { getLikes, postLike } from './like-item.js';
 import displayPopup from './popup-modal.js';
 
+const getData = () => {
+  getLikes();
+  displayPopup();
+  postLike();
+};
+
 const display = async () => {
   await fetchRecipes();
-  await getLikes();
-  await displayPopup();
-  await postLike();
+  await getData();
 };
 
 display();
