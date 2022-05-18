@@ -112,9 +112,10 @@ nav ul {
 }
 
 .like-btn {
+  cursor: pointer;
   min-width: 70px;
   height: 40px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   background-color: transparent;
   border: none;
   outline: none;
