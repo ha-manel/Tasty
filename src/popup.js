@@ -1,3 +1,5 @@
+// import postcomments from './comments.js';
+
 const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian';
 
 // const btnComment = document.querySelectorAll('#comments-btn');
@@ -27,5 +29,6 @@ window.openmodal = openmodal;
 closepopup.addEventListener('click', () => {
   popupmodal.style.display = 'none';
 });
+// postcomments();
 
 export default openmodal;
