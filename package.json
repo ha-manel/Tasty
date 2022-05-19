@@ -38,6 +38,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "jest-environment-jsdom": "^28.0.2",
     "babel-loader": "^8.2.5"
   }
 }
