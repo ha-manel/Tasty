@@ -4,13 +4,15 @@ const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstone
 const appID = 'FasIWx1EwA6odcY3m4KW';
 
 const commentsHeader = document.querySelector('.comments-container h4');
+const spinner = document.querySelector('#comments-spinner');
 
 const getComments = async (id) => {
   commentsHeader.innerHTML = 'Comments (0)';
-
+  spinner.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
   await fetch(`${baseURL}${appID}/comments?item_id=${id}`)
     .then((reponse) => reponse.json())
     .then((json) => {
+      spinner.innerHTML = '';
       commentsCounter(json, commentsHeader);
       const commentsList = document.querySelector('.comment');
       commentsList.innerHTML = '';
