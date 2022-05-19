@@ -1,7 +1,7 @@
 import './style.css';
 import fetchRecipes from './display-cards.js';
 import { getLikes, postLike } from './like-item.js';
-import displayPopup from './popup-modal.js';
+import displayPopup from './popup.js';
 
 const getData = () => {
   getLikes();

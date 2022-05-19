@@ -1,6 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import openmodal from './popup.js';
-
 const recipeCards = document.querySelector('#recipes-cards');
 const recipesLink = document.querySelector('#recipes-link');
 
