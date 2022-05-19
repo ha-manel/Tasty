@@ -5,6 +5,7 @@ body {
   font-family: 'Dosis', sans-serif;
   overflow-x: hidden;
   color: #343a40;
+  background-color: rgba(254, 250, 224, 0.7);
 }
 
 body.no-scroll {
@@ -57,20 +58,61 @@ nav ul {
 }
 
 #recipes-cards {
-  position: relative;
   width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 150px auto;
+  margin: 50px auto 150px;
 }
 
-#recipes-cards h2 {
-  position: absolute;
-  top: -80px;
+#recipes-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#recipes-header h2 {
   text-align: center;
   font-size: 35px;
+}
+
+#categories ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.category {
+  cursor: pointer;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+  background-color: rgba(224, 95, 55, 0.9);
+  padding: 5px 12px;
+  margin: 0 15px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.category:hover {
+  transform: scale(1.1);
+}
+
+.spinner {
+  margin: 20px auto 0;
+  font-size: 30px;
+}
+
+#recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .card {
@@ -81,7 +123,7 @@ nav ul {
   flex-direction: column;
   align-items: center;
   padding: 5px 0 35px;
-  margin: 20px;
+  margin: 20px 25px;
   border: 1px solid #efe7c4;
   border-radius: 12px;
   background-color: rgba(239, 231, 196, 0.5);
@@ -177,13 +219,18 @@ nav ul {
   align-items: center;
   background-color: #fefae0;
   border-radius: 12px;
-  padding: 0 30px 30px;
+  padding: 10px 30px 30px;
 }
 
 .close-btn {
   cursor: pointer;
-  font-size: 70px;
+  font-size: 35px;
   align-self: flex-end;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
 }
 
 .popup-image {
@@ -218,6 +265,9 @@ nav ul {
 .comments-container {
   width: 80%;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comment-modal h4 {
@@ -226,6 +276,7 @@ nav ul {
 }
 
 .comment {
+  width: 100%;
   list-style-type: none;
   padding: 0;
 }
