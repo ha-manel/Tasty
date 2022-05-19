@@ -29,9 +29,32 @@ const postComment = async (username, comment, id) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
+<<<<<<< HEAD
   }).then(() => {
     getComments(id);
   });
 };
 
 export { postComment, getComments };
+=======
+  })
+    .then((response) => response.json())
+    .then((json) => json);
+};
+
+form.addEventListener('submit', 'idMeal', (e) => {
+  e.preventDefault();
+  const username = document.querySelector('#yourname').value;
+  const comment = document.querySelector('#insight').value;
+  // eslint-disable-next-line no-undef
+  postcomments(username, comment, idMeal);
+});
+
+/*
+const getComments = async () => {
+  const response = await fetch(`${baseUrl}/${appUrl}/comments/`);
+  const comments = await response.json();
+}; */
+
+export default postcomments;
+>>>>>>> dev

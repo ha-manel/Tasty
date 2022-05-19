@@ -20,7 +20,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: #fefae0;
-  z-index: 1;
+  z-index: 8;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
