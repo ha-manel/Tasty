@@ -1,8 +1,8 @@
 const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 const appID = 'FasIWx1EwA6odcY3m4KW';
 
-const getComments = (id) => {
-  fetch(`${baseURL}${appID}/comments?item_id=${id}`)
+const getComments = async (id) => {
+  await fetch(`${baseURL}${appID}/comments?item_id=${id}`)
     .then((reponse) => reponse.json())
     .then((json) => {
       if (json) {
@@ -18,8 +18,8 @@ const getComments = (id) => {
     });
 };
 
-const postComment = (username, comment, id) => {
-  fetch(`${baseURL}${appID}/comments/`, {
+const postComment = async (username, comment, id) => {
+  await fetch(`${baseURL}${appID}/comments/`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
@@ -29,7 +29,9 @@ const postComment = (username, comment, id) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  }).then(getComments(id));
+  }).then(() => {
+    getComments(id);
+  });
 };
 
 export { postComment, getComments };
