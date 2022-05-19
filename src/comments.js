@@ -1,38 +1,45 @@
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const appUrl = 'PfqH1ufrdevL3Pxq8vXs';
+const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const appID = 'FasIWx1EwA6odcY3m4KW';
 
-// const commentlist = document.querySelector('#commentlist');
-const form = document.querySelector('#form-1');
+const commentsHeader = document.querySelector('.comments-container h4');
 
-// eslint-disable-next-line camelcase
-const postcomments = async (idMeal, username, comment) => {
-  await fetch(`${baseUrl}${appUrl}/apps/:app_id/comments/`, {
+const counter = (count) => count + 1;
+
+const getComments = async (id) => {
+  let count = 0;
+  commentsHeader.innerHTML = 'Comments (0)';
+  await fetch(`${baseURL}${appID}/comments?item_id=${id}`)
+    .then((reponse) => reponse.json())
+    .then((json) => {
+      if (json) {
+        const commentsList = document.querySelector('.comment');
+        commentsList.innerHTML = '';
+        json.forEach((comment) => {
+          count = counter(count);
+          const newComment = document.createElement('li');
+          newComment.innerHTML = `<span class="date">${comment.creation_date}</span><span class="name">${comment.username}:</span> <span
+              class="comment-text">${comment.comment}</span>`;
+          commentsList.appendChild(newComment);
+        });
+        commentsHeader.innerHTML = `Comments (${count})`;
+      }
+    });
+};
+
+const postComment = async (username, comment, id) => {
+  await fetch(`${baseURL}${appID}/comments/`, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: idMeal,
+      item_id: id,
       username,
       comment,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-    .then((response) => response.json())
-    .then((json) => json);
+  }).then(() => {
+    getComments(id);
+  });
 };
 
-form.addEventListener('submit', 'idMeal', (e) => {
-  e.preventDefault();
-  const username = document.querySelector('#yourname').value;
-  const comment = document.querySelector('#insight').value;
-  // eslint-disable-next-line no-undef
-  postcomments(username, comment, idMeal);
-});
-
-/*
-const getComments = async () => {
-  const response = await fetch(`${baseUrl}/${appUrl}/comments/`);
-  const comments = await response.json();
-}; */
-
-export default postcomments;
+export { postComment, getComments };

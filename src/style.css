@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600;700&display=swap');
 
 body {
   margin: 0;
   font-family: 'Dosis', sans-serif;
   overflow-x: hidden;
   color: #343a40;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 nav {
@@ -16,7 +20,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: #fefae0;
-  z-index: 8;
+  z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
@@ -144,6 +148,140 @@ nav ul {
   border: 1px solid #ff914d;
 }
 
+.comment-modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 58, 64, 0.8);
+  justify-content: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.comment-modal.active {
+  display: flex;
+  z-index: 3;
+}
+
+.popup-window {
+  width: 60%;
+  /* stylelint-disable-next-line csstree/validator */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefae0;
+  border-radius: 12px;
+  padding: 0 30px 30px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 70px;
+  align-self: flex-end;
+}
+
+.popup-image {
+  width: 90%;
+}
+
+.popup-image img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.item-info {
+  width: 87%;
+}
+
+.item-info h3 {
+  font-size: 35px;
+  color: #606c38;
+  margin-bottom: 0;
+}
+
+.recipe {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #000;
+  line-height: 1.5;
+}
+
+.comments-container {
+  width: 500px;
+}
+
+.comment-modal h4 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.comment {
+  list-style-type: none;
+}
+
+.comment li {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 8px;
+}
+
+.comment span {
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.comment .date {
+  margin-right: 20px;
+}
+
+.comment .comment-text {
+  font-weight: 500;
+}
+
+.add-comment {
+  width: 500px;
+}
+
+.add-comment form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.add-comment form input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.add-comment form input:focus {
+  outline: 2px solid #ced4da;
+}
+
+#submit-btn {
+  cursor: pointer;
+  width: 90px;
+  background-color: #e05f37;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+#submit-btn:hover {
+  background-color: #ff914d;
+}
+
 footer {
   width: 100vw;
   background-color: #efe7c4;
@@ -161,114 +299,4 @@ footer {
   color: #606c38;
   width: 100px;
   margin: 0 5px;
-}
-
-.modal {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  z-index: 10;
-}
-
-.image-container {
-  width: 20rem;
-  height: 15rem;
-  object-fit: contain;
-}
-
-.top-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-}
-
-.modal-head {
-  display: flex;
-  width: 33rem;
-}
-
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  background-color: white;
-  margin: 50px auto;
-  align-items: center;
-  padding: 5px;
-  border: 2px solid black;
-}
-
-.units {
-  display: flex;
-  justify-content: space-between;
-  width: 30rem;
-  margin-bottom: 5px;
-  margin-left: -50px;
-}
-
-.left-detail,
-.right-detail {
-  display: flex;
-  flex-direction: column;
-}
-
-#form-1 {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin-bottom: 5px;
-}
-
-#insight {
-  margin: 10px;
-  height: 50px;
-}
-
-#yourname {
-  margin: 10px;
-  height: 30px;
-}
-
-#submit {
-  width: 25%;
-  height: 30px;
-  align-self: flex-end;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.modal-body span {
-  line-height: 30px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.close {
-  font-size: 5rem;
-  padding: -10rem;
-  cursor: pointer;
-  margin-top: -40px;
-}
-
-.comments {
-  margin-left: -50px;
-}
-
-.comments ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  margin-left: -30px;
-}
-
-h4 {
-  font-size: 18px;
-  margin-top: 25px;
-  padding: 20px;
-  margin-left: -100px;
-  font-weight: 700;
 }
