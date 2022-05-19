@@ -14,7 +14,7 @@ const createForm = (id) => {
   const form = document.createElement('form');
   form.id = id;
   form.innerHTML = `<input type="text" placeholder="Your Name" id="name" required>
-          <input type="text" placeholder="Write your comment" id="comment" required>
+          <input type="text" placeholder="Your insight..." id="comment" required>
           <input type="submit" value="Comment" id="submit-btn">`;
   formContainer.appendChild(form);
   const name = document.querySelector('#name');

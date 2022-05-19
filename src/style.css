@@ -38,7 +38,7 @@ nav ul {
   font-size: 18px;
   letter-spacing: 0.3px;
   font-weight: 600;
-  margin-right: 40px;
+  margin: 0 20px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -64,7 +64,6 @@ nav ul {
   align-items: center;
   flex-wrap: wrap;
   margin: 150px auto;
-  gap: 40px;
 }
 
 #recipes-cards h2 {
@@ -82,7 +81,7 @@ nav ul {
   flex-direction: column;
   align-items: center;
   padding: 5px 0 35px;
-  margin-top: 40px;
+  margin: 20px;
   border: 1px solid #efe7c4;
   border-radius: 12px;
   background-color: rgba(239, 231, 196, 0.5);
@@ -90,7 +89,7 @@ nav ul {
 }
 
 .meal-thumbnail {
-  width: 280px;
+  width: 97%;
   height: 280px;
   object-fit: cover;
 }
@@ -169,6 +168,8 @@ nav ul {
 
 .popup-window {
   width: 60%;
+  min-width: 420px;
+  max-width: 700px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -214,7 +215,8 @@ nav ul {
 }
 
 .comments-container {
-  width: 500px;
+  width: 80%;
+  max-width: 400px;
 }
 
 .comment-modal h4 {
@@ -224,6 +226,7 @@ nav ul {
 
 .comment {
   list-style-type: none;
+  padding: 0;
 }
 
 .comment li {
@@ -247,11 +250,12 @@ nav ul {
 }
 
 .add-comment {
-  width: 500px;
+  width: 70%;
+  max-width: 300px;
 }
 
 .add-comment form {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -298,4 +302,66 @@ footer {
   color: #606c38;
   width: 100px;
   margin: 0 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-link {
+    font-size: 15px;
+    margin: 0 10px;
+  }
+
+  #headline {
+    background-image: url('./assets/banner-mobile.png');
+    background-position: 50% 50%;
+  }
+
+  #recipes-cards {
+    width: 100%;
+  }
+
+  #recipes-cards h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 90%;
+    min-width: 230px;
+    max-width: 290px;
+  }
+
+  .meal-name {
+    font-size: 20px;
+  }
+
+  .comments-btn {
+    font-size: 1rem;
+  }
+
+  .popup-window {
+    width: 90%;
+    min-width: 200px;
+    padding: 0 8px 30px;
+    box-sizing: border-box;
+  }
+
+  .item-info h3 {
+    font-size: 26px;
+  }
+
+  .comment-modal h4 {
+    font-size: 22px;
+  }
+
+  .comment span {
+    font-size: 16px;
+  }
+
+  .add-comment form input {
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 17px;
+    margin-left: 5%;
+  }
 }
