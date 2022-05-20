@@ -375,6 +375,15 @@ footer {
     font-size: 28px;
   }
 
+  #categories ul {
+    flex-wrap: wrap;
+  }
+
+  .category {
+    margin: 5px;
+    font-size: 15;
+  }
+
   .card {
     width: 90%;
     min-width: 230px;
