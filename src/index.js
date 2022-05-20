@@ -1,5 +1,5 @@
 import './style.css';
-import fetchRecipes from './display-cards.js';
+import { fetchRecipes } from './display-cards.js';
 import { getLikes, postLike } from './like-item.js';
 import displayPopup from './popup.js';
 
