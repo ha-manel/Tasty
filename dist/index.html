@@ -24,12 +24,25 @@
   </section>
 
   <section id="recipes-cards">
-    <h2>Recipes</h2>
+    <div id="recipes-header">
+      <h2>Recipes</h2>
+      <div id="categories">
+        <ul>
+          <li class="category" id="dessert">Dessert</li>
+          <li class="category" id="pasta">Pasta</li>
+          <li class="category" id="seafood">Seafood</li>
+          <li class="category" id="starter">Starter</li>
+        </ul>
+      </div>
+    </div>
+    <span id="recipes-spinner" class="spinner"></span>
+    <div id="recipes-container">
+    </div>
   </section>
 
   <section class="comment-modal">
     <div class="popup-window">
-      <div class="close-btn">&times;</div>
+      <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
       <div class="popup-image">
         <img src="#" alt="popup-image">
       </div>
@@ -41,6 +54,7 @@
         <h4>Comments</h4>
         <ul class="comment">
         </ul>
+        <span id="comments-spinner" class="spinner"></span>
       </div>
       <div class="add-comment">
       </div>
