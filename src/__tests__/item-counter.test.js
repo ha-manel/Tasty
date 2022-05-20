@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { itemsCounter } from '../stats.js';
+import { itemsCounter } from '../modules/stats.js';
 
 describe('Testing items counter', () => {
   // Arrange

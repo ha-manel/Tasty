@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { commentsCounter } from '../stats.js';
+import { commentsCounter } from '../modules/stats.js';
 
 describe('Testing comments counter', () => {
   // Arrange
