@@ -4,6 +4,9 @@
 
 > Tasty is a website that displays a number of recipes and allows users to leave likes and comments on their favourite meals.
 
+![image](https://user-images.githubusercontent.com/50721479/172444793-60029832-6868-43b5-95c6-9ed3b5f3158a.png)
+
+
 ## Requirements
 
 Build a website that provides data about meals using: 
